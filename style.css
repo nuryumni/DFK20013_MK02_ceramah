@@ -1,91 +1,97 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #f4f6f8;
+    background-color: #f4f6f8;
 }
 
 header {
-    background: #0a3d62;
-    color: #f4f6f8;
-    padding: 30px;
+    background-color: #0a3d62;
+    color: white;
     text-align: center;
+    padding: 20px;
 }
 
 section {
     max-width: 900px;
     margin: 20px auto;
     background: white;
-    padding: 30px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-h2 {
-    color: #0a3d62;
-}
-
-/* speaker */
-.speaker {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.speaker img {
-    width: 150px;
-    border-radius: 8px;
-}
-
-/* info box */
-.info-box {
-    background: #ecf0f1;
-    padding: 10px;
-    margin-bottom: 8px;
-    border-radius: 5px;
-}
-
-/* form */
-form label {
+label {
     display: block;
-    margin-top: 15px;
-    font-weight: bold;
+    margin-top: 10px;
 }
 
-form input,
-form select {
-    width: 100%;
-    padding: 8px;
+input, select {
     margin-top: 5px;
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
 }
 
-button {
-    width: 100%;
-    margin-top: 20px;
-    padding: 12px;
-    background: #0a3d62;
+#borang button {
+    display: block;               
+    width: 220px;                 
+    margin: 20px auto 0 auto;
+    padding: 12px 0;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0a3d62;
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    text-align: center;
 }
 
-button:hover {
-    background: #0652dd;
+#borang button:hover {
+    background-color: #094275;
 }
 
-/* confirmation */
-.confirmation {
-    margin-top: 30px;
-    background: #dff9fb;
-    padding: 20px;
-    border-radius: 8px;
-    display: none;
+table {
+    margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #0a3d62;
+    color: white;
 }
 
 footer {
-    background: #0a3d62;
-    color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
+    padding: 15px 0;
+    background-color: #0a3d62;
+    color: white;
+    margin-top: 20px;
 }
+
+.speaker {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#tablePendaftaran {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tablePendaftaran th,
+#tablePendaftaran td {
+    text-align: center;
+    padding: 8px;
+}
+
+#tablePendaftaran th {
+    background-color: #0a3d62;
+    color: white;
+}
+

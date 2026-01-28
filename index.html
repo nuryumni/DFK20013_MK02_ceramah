@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ceramah Profesional Teknologi Maklumat</title>
-
-    <!-- Betulkan link CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +16,7 @@
 <section>
     <h2>Penceramah</h2>
     <div class="speaker">
-        <img src="penceramah.JPEG" alt="Penceramah">
+        <img src="penceramah.JPEG" alt="Penceramah" width="150">
         <div>
             <p><strong>Nama:</strong> Pn. Hawariyah Binti Rahim</p>
             <p><strong>Kepakaran:</strong> System Analysis & Design Fundamentals</p>
@@ -70,16 +68,33 @@
         <input type="number" id="slot" min="1" required>
 
         <label>Bukti Pembayaran</label>
-        <input type="file" required>
+        <input type="file" id="resit" required>
 
         <button type="submit">Hantar</button>
     </form>
 
+    <div id="confirmation" style="display:none; color:green; margin-top:10px;"></div>
+
+    <h3>Senarai Pendaftaran</h3>
+    <table id="tablePendaftaran" border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>No. Telefon</th>
+                <th>Kategori</th>
+                <th>Bilangan Slot</th>
+                <th>Resit</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
     <h4>Hubungi Miss Yumni (Penganjur)</h4>
     <p>Telefon: 012-9130781</p>
 </section>
-
-<div class="confirmation" id="pengesahan"></div>
 
 <footer>
     © 2026 DFC20013 Web Design Technology

@@ -1,27 +1,32 @@
-document.getElementById("borang").addEventListener("submit", function (e) {
+const borang = document.getElementById("borang");
+const tableBody = document.getElementById("tablePendaftaran").querySelector("tbody");
+const confirmation = document.getElementById("confirmation");
+
+borang.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const harga = 100;
+    const nama = document.getElementById("nama").value;
+    const email = document.getElementById("email").value;
+    const telefon = document.getElementById("telefon").value;
+    const kategori = document.getElementById("kategori").value;
+    const slot = document.getElementById("slot").value;
 
-    let nama = document.getElementById("nama").value;
-    let email = document.getElementById("email").value;
-    let telefon = document.getElementById("telefon").value;
-    let kategori = document.getElementById("kategori").value;
-    let slot = Number(document.getElementById("slot").value);
+    let resitInput = document.getElementById("resit");
+    let resit = resitInput.files.length > 0 ? resitInput.files[0].name : "";
 
-    let jumlah = harga * slot;
-
-    let paparan = `
-        <h3>Pengesahan Pendaftaran</h3>
-        <p><strong>Nama:</strong> ${nama}</p>
-        <p><strong>E-mel:</strong> ${email}</p>
-        <p><strong>Telefon:</strong> ${telefon}</p>
-        <p><strong>Kategori:</strong> ${kategori}</p>
-        <p><strong>Bilangan Slot:</strong> ${slot}</p>
-        <p><strong>Jumlah Yuran:</strong> RM ${jumlah.toFixed(2)}</p>
+    const row = document.createElement("tr");
+    row.innerHTML = `
+        <td>${nama}</td>
+        <td>${email}</td>
+        <td>${telefon}</td>
+        <td>${kategori}</td>
+        <td>${slot}</td>
+        <td>${resit}</td>
     `;
+    tableBody.appendChild(row);
 
-    let pengesahan = document.getElementById("pengesahan");
-    pengesahan.innerHTML = paparan;
-    pengesahan.style.display = "block";
+    confirmation.textContent = `Terima kasih ${nama}, pendaftaran anda berjaya!`;
+    confirmation.style.display = "block";
+
+    borang.reset();
 });
